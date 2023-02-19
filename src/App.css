@@ -1,7 +1,9 @@
 body{
   width: 425px;
-  background-color: #8A817C;
+  background-color: rgba(24,24,22,1);
   color: #F4F3EE;
+  margin: 0;
+  padding: 0;
 }
 nav{
   position: absolute;
@@ -25,7 +27,7 @@ nav svg{
 .light{
   position: absolute;
   top: 0;
-  margin-left: 50px;
+  margin-left: 85px;
   background: rgb(252,172,0);
   background: radial-gradient(circle, rgba(252,172,0,1) 0%, rgba(114,114,143,0) 75%);  
   width: 200px;
@@ -49,9 +51,38 @@ nav svg{
     opacity: 0.7;
   }
 }
+
+.light2{
+  position: absolute;
+  top: 70px;
+  left: 300px;
+  background: rgb(252,172,0);
+  background: radial-gradient(circle, rgba(252,172,0,1) 0%, rgba(114,114,143,0) 75%);  
+  width: 100px;
+  height: 100px;
+  animation: light2 6.0s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+}
+
+@keyframes light2 {
+  0% {
+    opacity: 0.7;
+  }
+  20%{
+    opacity: 0.3;
+  }
+  50%{
+    opacity: 0.4;
+  }
+  65%{
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
 .Login{
   position: absolute;
-  right: 0;
+  right: 1%;
   top: 0;
   margin: 0;
   margin-top: 10px;
@@ -60,6 +91,7 @@ nav svg{
   background-color: #490f3f;
   display: flex;
   align-items: center;
+  
   justify-content: center;
   border-radius: 10px;
 }
@@ -70,5 +102,15 @@ nav svg{
   font-family: 'Gloock', serif;
   letter-spacing: 2px;
 }
-.music{
+#iframeAudio{
+  display: none;
+}
+.Fade{
+  margin: 0;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  margin-top: 440px;
+  background: rgb(34,193,195);
+  background: linear-gradient(180deg, rgba(34,193,195,0) 0%, rgba(24,24,22,1) 100%);
 }

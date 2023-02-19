@@ -13,18 +13,16 @@ function App() {
     <div className="App">
 
 
+
+<iframe src={mySound} allow="autoplay" id="iframeAudio">
+</iframe> 
       <h2 className='Login'>Log In</h2>
       <Nav></Nav>
-      <img src={Map} className='Map'/>
+      <main className='Canvas'><div className='Fade'></div><img src={Map} className='Map'/></main>
+
       <div className='light'></div>
+      <div className='light2'></div>
       <h1 className='title'>🔮 Earth of Dungeons 🔮</h1>
-      <ReactAudioPlayer className='music'
-  src={mySound}
-  autoPlay={true}
-  loop={true}
-  controls={true}
-  volume={0.1}
-/>
     </div>
   );
 }
