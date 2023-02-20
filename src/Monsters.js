@@ -36,7 +36,7 @@ function Monsters() {
             </ul>
             <span>Rank C:</span>
             <ul>
-                <li>Orcs Guerreiros</li>
+                <li>Zumbis Guerreiros</li>
                 <li>Ooze Ácido</li>
                 <li>Serpente Venenosa Gigante</li>
                 <li>Esqueleto com Espada</li>

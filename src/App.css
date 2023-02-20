@@ -90,6 +90,7 @@ nav {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 100;
   background-color: transparent;
   transition: 0.3s all linear;
 }
@@ -112,22 +113,20 @@ nav {
   width: 100%;
 }
 button{
-  border: 2px solid #fcac00;
-  color: #fcac00;
+  border: 2px solid #eed895;
+  color: #eed895;
   background-color: rgb(172, 11, 11);
   padding: 05px 10px;
   border-radius: 5px;
-  border-bottom: 7px solid #fcac00;
-  margin-left: 50%;
+  border-bottom: 7px solid #eed895;
   font-family: 'Gloock', serif;
   font-weight: bold;
   letter-spacing: 1.4px;
-  transform: translate(-50%);
   transition: 0.2s all linear;
 }
 button:hover{
-  border-bottom: 2px solid #fcac00;
-
+  border-bottom: 2px solid #eed895;
+transform: translateY(5px);
 }
 nav svg {
   width: 30px;
@@ -140,9 +139,43 @@ nav svg {
 }
 .Map {
   width: 100% !important;
-  z-index: -1000;
+  z-index: -100;
+  transition: 1.5s all linear;
+  height: 637px;
+  
 }
+.Mapa{
+  position: absolute;
+  flex-direction: column;
+  z-index: 100;
+  display: flex;
+  opacity: 0;
+  margin-top: 80px;
+  margin-left: 140px;
+  transition: 1.8s all linear;
+  filter: drop-shadow( 0px  0px 15px rgb(36, 33, 33));
+}
+.Mapa::before{
+  content: '';
+  width: 100%;
+  height: 100px;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.575) 0%, rgba(114, 114, 143, 0) 75%);
+  position: absolute;
+  bottom: -40px;
+}
+.Mapa img{
+  width: 100px;
 
+  transform: rotate(180deg);
+}
+.Canvas{
+  max-height: 637px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
 .light {
   position: absolute;
   top: 0;
@@ -173,6 +206,19 @@ nav svg {
 
   100% {
     opacity: 0.7;
+  }
+}
+@keyframes apear {
+  0% {
+    opacity: 0;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -210,6 +256,7 @@ nav svg {
 }
 
 .Login {
+  z-index: 100;
   position: absolute;
   right: 1%;
   top: 0;
@@ -228,6 +275,7 @@ nav svg {
 }
 
 .title {
+  z-index: 100;
   font-family: 'Gloock', serif;
   letter-spacing: 2px;
   position: absolute;
@@ -240,6 +288,7 @@ nav svg {
 }
 
 .subtitle {
+  z-index: 100;
   font-family: 'Playfair Display', serif;
   letter-spacing: 2px;
   position: absolute;
@@ -272,6 +321,7 @@ nav svg {
 }
 
 .Fade {
+  z-index: 100;
   margin: 0;
   width: 100% !important;
   height: 200px;
@@ -342,6 +392,7 @@ text-align: center;
   border-radius: 15px;
 }
 .Side {
+  z-index: 10000;
   width: 80%;
   height: 10vh;
   display: flex;
@@ -349,10 +400,13 @@ text-align: center;
   background: #7e6c38;
   color: #eed895;
   flex-direction: column;
-  z-index: 100;
   transform: translateX(-500px);
 }
-
+.Start{
+  position: absolute;
+  top: 580px;
+  z-index: 100;
+}
 .Side svg {
   width: 30px;
   color: #070711;

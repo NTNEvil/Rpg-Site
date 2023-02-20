@@ -10,7 +10,7 @@ import char2 from './char3.png'
 
 function Friends() {
 
-
+    
     return (
 
         <div className="FriendsApp">

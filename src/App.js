@@ -10,11 +10,19 @@ import mySound from './music.mp3'
 import Footer from './components/footer';
 import Carrosel from './components/carrosel';
 import SideMenu from './components/sidemenu';
-
+import sound from './zoom.mp3'
 import Nav from './components/nav';
+import compass from './compass.png'
+import { useEffect, useState } from 'react';
 
 function Home() {
 
+function animate() {
+  new Audio(sound).play();
+  document.querySelector('.Map').style.transform =  'scale(4.2) rotate(180deg)';
+  document.querySelector('.Mapa').style.animation = 'apear 1.5s linear'
+  document.querySelector('.Mapa').style.opacity = '1'
+}
 
   return (
 
@@ -24,12 +32,13 @@ function Home() {
       </div>
 
       <SideMenu></SideMenu>
+
       <iframe src={mySound} allow="autoplay" id="iframeAudio">
       </iframe>
       <h2 className='Login'>Log In</h2>
       <Nav></Nav>
-      <main className='Canvas'><div className='Fade'></div>      <h1 className='title'> Earth of Dungeons </h1> <h2 className='subtitle'>Explore o Mundo de magia</h2><img src={Map} className='Map' /></main>
-
+      <main className='Canvas'><div className='Fade'></div>      <h1 className='title'> Earth of Dungeons </h1> <h2 className='subtitle'>Explore o Mundo de magia</h2><button className='Start' onClick={animate}>Começar</button><div className='Mapa'><img src={compass}/>Fronteira Unida</div><img src={Map} className='Map' /></main>
+      <audio src={sound}/>
       <div className='light'></div>
       <div className='light2'></div>
       <div className='Scroll'>
@@ -40,7 +49,7 @@ function Home() {
         <h4>Scroll</h4></div>
       <div className='canvas1'>
                 <h1>O mundo</h1>
-        <p>Houve um tempo em que a paz reinava entre as diferentes raças do mundo de Jigen. Elfos, anões, humanos, orcs, todos coexistiam pacificamente, compartilhando suas culturas e tradições. No entanto, tudo mudou quando a guerra eclodiu entre eles. Ninguém sabe exatamente qual foi a causa, mas logo as batalhas se tornaram comuns e o mundo se tornou um lugar perigoso, cheio de morte e destruição.
+        <p>Houve um tempo em que a paz reinava entre as diferentes raças do mundo de Jigen. Elfos, anões, humanos, orcs,Fadas, Draconatos, Tieflings todos coexistiam pacificamente, compartilhando suas culturas e tradições. No entanto, tudo mudou quando a guerra eclodiu entre eles. Ninguém sabe exatamente qual foi a causa, mas logo as batalhas se tornaram comuns e o mundo se tornou um lugar perigoso, cheio de morte e destruição.
         </p>
         <div className='ornnament'><img src={orn} className='orn' /><img className='imgHistory' src={War} /></div>
 
