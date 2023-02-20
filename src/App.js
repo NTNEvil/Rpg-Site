@@ -26,6 +26,8 @@ function animate() {
     document.querySelector('.light').style.display = 'none'
     document.querySelector('.light2').style.display = 'none'
     document.querySelector('.Start').innerHTML = 'Voltar'
+    document.querySelector('.title').innerHTML =  'Earth of Dungeons';
+    document.querySelector('.subtitle').innerHTML =  'Explore o Mundo de magia';
   }else{
     istrue = true
     document.querySelector('.Mapa').style.animation = 'disapear 1.5s linear'
@@ -34,12 +36,25 @@ function animate() {
     document.querySelector('.light').style.display = 'block'
     document.querySelector('.light2').style.display = 'block'
     document.querySelector('.Start').innerHTML = 'Começar'
+    document.querySelector('.Map').style.transform =  'scale(1) rotate(0deg)';
     new Audio(sound).play();
 
   }
 
 }
 
+function FronteiraUnida(){
+  istrue = true
+  document.querySelector('.Mapa').style.animation = 'disapear 1.5s linear'
+  document.querySelector('.Map').style.transform =  'scale(0) rotate(0deg)';
+  document.querySelector('.FronteiraUnida').style.opacity =  '1';
+  document.querySelector('.title').innerHTML =  'Fronteira Unida';
+  document.querySelector('.subtitle').innerHTML =  'O inicio';
+  document.querySelector('.Mapa').style.opacity = '0'
+  
+  document.querySelector('.Start').innerHTML = 'Começar'
+  new Audio(sound).play();
+}
   return (
 
     <div className="App">
@@ -53,7 +68,20 @@ function animate() {
       </iframe>
       <h2 className='Login'>Log In</h2>
       <Nav></Nav>
-      <main className='Canvas'><div className='Fade'></div>      <h1 className='title'> Earth of Dungeons </h1> <h2 className='subtitle'>Explore o Mundo de magia</h2><button className='Start' onClick={animate}>Começar</button><div className='Mapa'><img src={compass}/>Fronteira Unida</div><img src={Map} className='Map' /></main>
+      <main className='Canvas'>
+        
+        <div className='Fade'></div>      
+        
+        <h1 className='title'> Earth of Dungeons </h1>
+        
+         <h2 className='subtitle'>Explore o Mundo de magia</h2>
+        
+        <button className='Start' onClick={animate}>Começar</button>
+        
+        
+        <div className='Mapa' onClick={FronteiraUnida}><img src={compass}/>Fronteira Unida</div><img src={Map} className='Map' />
+        <img className='FronteiraUnida' src='https://cdn.discordapp.com/attachments/946523460060975157/1077317130363621478/NTC_KINGEz_village_people_town__fantasy__anime__RPG_d520750f-ebb9-4500-adc4-00829d688402.png'/>
+      </main>
       <audio src={sound}/>
       <div className='light'></div>
       <div className='light2'></div>
