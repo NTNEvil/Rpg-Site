@@ -4,6 +4,9 @@ body{
   color: #F4F3EE;
   margin: 0;
   padding: 0;
+  overflow-y: hidden !important;
+}
+#root{
   overflow-y: hidden;
 }
 nav{
@@ -103,13 +106,32 @@ nav svg{
 .title{
   font-family: 'Gloock', serif;
   letter-spacing: 2px;
+  position: absolute;
+  font-weight: lighter;
+  color:rgb(252,172,0);
+  text-align: center;
+  width: 100%;
+  margin-top: 500px;
+  text-shadow: 0px 0px 10px rgb(252,172,0);
+  animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+@keyframes flip-in-hor-bottom {
+  0% {
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
 #iframeAudio{
   display: none;
 }
 .Fade{
   margin: 0;
-  width: 100%;
+  width: 100% !important;
   height: 200px;
   position: absolute;
   margin-top: 440px;

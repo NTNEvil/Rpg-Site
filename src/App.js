@@ -18,13 +18,14 @@ function App() {
 </iframe> 
       <h2 className='Login'>Log In</h2>
       <Nav></Nav>
-      <main className='Canvas'><div className='Fade'></div><img src={Map} className='Map'/></main>
+      <main className='Canvas'><div className='Fade'></div>      <h1 className='title'> Earth of Dungeons </h1><img src={Map} className='Map'/></main>
 
       <div className='light'></div>
       <div className='light2'></div>
-      <h1 className='title'>🔮 Earth of Dungeons 🔮</h1>
+
     </div>
   );
+
 }
 
 export default App;
