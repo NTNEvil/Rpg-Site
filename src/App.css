@@ -1,13 +1,18 @@
 body{
-  width: 425px;
   background-color: rgba(24,24,22,1);
   color: #F4F3EE;
   margin: 0;
   padding: 0;
-  overflow-y: hidden !important;
+  overflow-x: hidden;
 }
 #root{
-  overflow-y: hidden;
+  overflow-x: hidden;
+  max-width: 425px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.App{
 }
 nav{
   position: absolute;
@@ -27,6 +32,16 @@ nav svg{
 }
 .Map{
   width: 100% !important;
+z-index: -1000;
+}
+.orn{
+  position: absolute;
+  width: 380px;
+  
+  margin-left: 20px;
+  margin-top: 10px;
+  filter: invert(76%) sepia(19%) saturate(7456%) hue-rotate(0deg) brightness(101%) contrast(105%) drop-shadow(30px 10px 10px #1d1b04);
+  height: 400px;
 }
 .light{
   position: absolute;
@@ -85,7 +100,6 @@ nav svg{
   }
 }
 .Login{
-
   position: absolute;
   right: 1%;
   top: 0;
@@ -96,7 +110,6 @@ nav svg{
   background-color: #490f3f;
   display: flex;
   align-items: center;
-  display: none;
   justify-content: center;
   border-radius: 10px;
 }
@@ -112,7 +125,7 @@ nav svg{
   text-align: center;
   width: 100%;
   margin-top: 500px;
-  text-shadow: 0px 0px 10px rgb(252,172,0);
+  text-shadow: 0px 0px 10px #fcac00;
   animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 @keyframes flip-in-hor-bottom {
@@ -137,4 +150,119 @@ nav svg{
   margin-top: 440px;
   background: rgb(34,193,195);
   background: linear-gradient(180deg, rgba(34,193,195,0) 0%, rgba(24,24,22,1) 100%);
+}
+.Scroll{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-top: 40px;
+  font-size: large
+}
+.Scroll svg{
+  animation: updown 3.0s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+
+}
+@keyframes updown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.Side{
+  width: 80%;
+  height: 10vh;
+  display: flex;
+  position: fixed;
+  background-color: #490f3f;
+  flex-direction: column;
+  z-index: 100;
+  transform: translateX(-500px);
+}
+.Side svg{
+  width: 50px;
+  margin: 30px;
+}
+.Side ul{
+
+}
+.Side li{
+  list-style: none;
+  margin: 10px;
+  font-size: xx-large;
+  transition: 0.3s all linear;
+}
+.Side li:hover{
+  background: rgb(41,8,35);
+  background: linear-gradient(90deg, rgba(41,8,35,1) 0%, rgba(253,29,29,0) 60%);
+}
+@keyframes slide-in-fwd-tl {
+  0% {
+    transform: translateZ(-1400px) translateY(-800px) translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0) translateY(0) translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-out-bck-tl {
+  0% {
+    transform: translateZ(0) translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(-1100px) translateY(-1000px) translateX(-1000px);
+    opacity: 0;
+  }
+}
+.canvas1{
+  margin-top: 100px;
+
+}
+.canvas1 h1{
+  font-family: 'Gloock', serif;
+
+  font-weight: lighter;
+  text-align: center;
+}
+.canvas1 p{
+  margin: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: large;
+}
+.imgHistory{
+  width: 330px;
+  margin: 10%
+}
+footer{
+  width: 100%;
+  padding: 20px;
+  margin-top: 50px;
+  background-color: #490f3f;
+}
+.canvas2{
+  margin-top: 50px;
+}
+.canvas2 h1{
+  width: 100%;
+  text-align: center;
+  font-family: 'Gloock', serif;
+}
+
+.carousel{
+  width: 100% !important;
+}
+.legend{
+  background-color: transparent !important;
+  font-size: larger !important;
+  font-family: 'Gloock', serif;
+  
+}
+.carousel-root{
+  width: 100% !important;
 }

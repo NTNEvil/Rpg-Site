@@ -1,3 +1,5 @@
+
+
 function Nav() {
     return (
 <nav onClick={SideMenu}>
@@ -8,7 +10,9 @@ function Nav() {
     );
 
     function SideMenu(){
-        
+        document.querySelector('.Side').style.transform = 'translateX(0px)'
+        document.querySelector('.Side').style.height = '100vh'
+        document.querySelector('.Side').style.animation = 'slide-in-fwd-tl 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'
     }
   }
   

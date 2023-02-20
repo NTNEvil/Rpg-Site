@@ -5,16 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 425px;
   background-color: rgba(24,24,22,1);
   color: #F4F3EE;
   margin: 0;
   padding: 0;
-  overflow-y: hidden !important;
+  overflow-x: hidden !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
