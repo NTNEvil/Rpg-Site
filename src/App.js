@@ -13,7 +13,6 @@ import SideMenu from './components/sidemenu';
 import sound from './zoom.mp3'
 import Nav from './components/nav';
 import compass from './compass.png'
-import { useEffect, useState } from 'react';
 
 function Home() {
 var istrue = true

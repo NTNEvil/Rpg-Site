@@ -27,7 +27,7 @@ body {
   left: 50px;
 }
 .Side img:last-child{
-transform: rotate(90deg) translateY(-160px) translateX(-180px);
+transform: rotate(90deg) translateY(-110px) translateX(-180px);
 }
 .Profile h2{
   width: 100%;
@@ -406,7 +406,7 @@ text-align: center;
 }
 .Side {
   z-index: 10000;
-  width: 80%;
+  width: 50%;
   height: 10vh;
   display: flex;
   position: fixed;
@@ -414,6 +414,10 @@ text-align: center;
   color: #eed895;
   flex-direction: column;
   transform: translateX(-500px);
+}
+.Side ul{
+  margin: 0;
+  padding: 0;
 }
 .Start{
   position: absolute;
