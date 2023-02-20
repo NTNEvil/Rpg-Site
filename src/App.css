@@ -16,12 +16,9 @@ body{
 }
 nav{
   position: absolute;
-  width: 5%;
+  left: 0;
   top: 0;
-  padding: 15px 10px;
-  padding-right: 30px;
-  border-radius: 0px 10px 500px 0px;
-  background-color: #490f3f;
+  background-color: transparent;
 transition: 0.3s all linear;
 }
 nav:hover{
@@ -29,20 +26,13 @@ nav:hover{
 }
 nav svg{
   width: 30px;
+  margin: 20px;
 }
 .Map{
   width: 100% !important;
 z-index: -1000;
 }
-.orn{
-  position: absolute;
-  width: 380px;
-  
-  margin-left: 20px;
-  margin-top: 10px;
-  filter: invert(76%) sepia(19%) saturate(7456%) hue-rotate(0deg) brightness(101%) contrast(105%) drop-shadow(30px 10px 10px #1d1b04);
-  height: 400px;
-}
+
 .light{
   position: absolute;
   top: 0;
@@ -105,36 +95,49 @@ z-index: -1000;
   top: 0;
   margin: 0;
   margin-top: 10px;
-  font-weight: lighter;
+  font-weight: 400;
   padding: 02px 10px;
-  background-color: #490f3f;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
 }
 .Login:hover{
-  background-color: #290823;
+  color: #1d1b04;
 }
 .title{
   font-family: 'Gloock', serif;
   letter-spacing: 2px;
   position: absolute;
-  font-weight: lighter;
   color:rgb(252,172,0);
   text-align: center;
   width: 100%;
   margin-top: 500px;
   text-shadow: 0px 0px 10px #fcac00;
-  animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: flip-in-hor-bottom 5.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+}
+.subtitle{
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  position: absolute;
+  font-weight: lighter;
+  color:rgb(255, 255, 255);
+  text-align: center;
+  font-size: large;
+  width: 100%;
+  margin-top: 550px;
+  text-shadow: 0px 0px 10px #fcac00;
 }
 @keyframes flip-in-hor-bottom {
   0% {
-    transform: rotateX(80deg);
-    opacity: 0;
+    
+    opacity: 1;
+  }
+  50%{
+    letter-spacing: 3px;
   }
   100% {
-    transform: rotateX(0);
     opacity: 1;
   }
 }
@@ -156,7 +159,8 @@ z-index: -1000;
   flex-direction: column-reverse;
   align-items: center;
   margin-top: 40px;
-  font-size: large
+  font-size: x-large;
+  font-family: 'Playfair Display', serif;
 }
 .Scroll svg{
   animation: updown 3.0s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
@@ -178,14 +182,14 @@ z-index: -1000;
   height: 10vh;
   display: flex;
   position: fixed;
-  background-color: #490f3f;
+  background: rgb(73,15,63);
   flex-direction: column;
   z-index: 100;
   transform: translateX(-500px);
 }
 .Side svg{
-  width: 50px;
-  margin: 30px;
+  width: 30px;
+  margin: 20px;
 }
 .Side ul{
 
@@ -202,7 +206,7 @@ z-index: -1000;
 }
 @keyframes slide-in-fwd-tl {
   0% {
-    transform: translateZ(-1400px) translateY(-800px) translateX(-1000px);
+    transform: translateX(-1000px);
     opacity: 0;
   }
   100% {
@@ -216,7 +220,7 @@ z-index: -1000;
     opacity: 1;
   }
   100% {
-    transform: translateZ(-1100px) translateY(-1000px) translateX(-1000px);
+    transform: translateX(-1000px);
     opacity: 0;
   }
 }
@@ -226,27 +230,57 @@ z-index: -1000;
 }
 .canvas1 h1{
   font-family: 'Gloock', serif;
+  color: #eed895;
 
   font-weight: lighter;
   text-align: center;
 }
 .canvas1 p{
+  color: #eed895;
   margin: 10px;
   font-family: 'Playfair Display', serif;
   font-size: large;
 }
+.ornnament{
+  height: 306px;
+  margin: 20px auto;
+  position: relative;
+  width: 306px;
+}
 .imgHistory{
-  width: 330px;
-  margin: 10%
+  width: 100%;
+position: absolute;  
+border-radius: 10px;
+top: 0;
+left: 0;
+z-index: -100;
+}
+.orn{
+  width: 306px;
+  height:306px ;
+  z-index: 100;
 }
 footer{
   width: 100%;
   padding: 20px;
   margin-top: 50px;
-  background-color: #490f3f;
+  background-color: #B49286;
+  color: black;
 }
 .canvas2{
-  margin-top: 50px;
+  width: 80%;
+  margin-left: 50%;
+  transform: translate(-50%);
+  padding: 10px;
+  border: 1px solid white;
+
+}
+.canvas2 p{
+  font-family: 'Playfair Display', serif;
+}
+hr{
+  margin: 50px;
+  border: 1px solid white;
 }
 .canvas2 h1{
   width: 100%;
