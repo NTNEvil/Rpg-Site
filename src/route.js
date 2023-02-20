@@ -4,7 +4,7 @@ import Guild from './guild';
 import User from './user';
 import Friends from './friends';
 import Monsters from './Monsters';
-
+import Shop from './Shop';
 function App() {
   
 
@@ -16,6 +16,7 @@ return(
       <Route path="/guild" element={<Guild />} />
       <Route path="/User" element={<User />} />
       <Route path="/friends" element={<Friends />} />
+      <Route path="/shop" element={<Shop />} />
       <Route path="/monsters" element={<Monsters />} />
     </Routes>
   </Router>

@@ -147,8 +147,8 @@ nav svg {
 .Mapa{
   position: absolute;
   flex-direction: column;
+  display: none;
   z-index: 100;
-  display: flex;
   opacity: 0;
   margin-top: 80px;
   margin-left: 140px;
@@ -164,6 +164,17 @@ nav svg {
   z-index: -101;
   opacity: 0;
   transition: 1.5s all linear;
+}
+.FronteiraUnidaShop{
+  z-index: -200;
+  transition: 2s all linear;
+  position: absolute;
+  left: 130px;
+  transform: rotate(20deg);
+  top: 305px;
+  padding: 5px ;
+  background-color: rgba(255, 0, 0, 0.445);
+  border-radius: 5px;
 }
 .Mapa::after{
   content: '';
