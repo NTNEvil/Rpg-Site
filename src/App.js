@@ -68,6 +68,20 @@ Além disso, também há os Tieflings, uma raça com traços demoníacos que mui
 Cada raça possui sua própria cultura, tradições e história, o que torna o mundo de fantasia dos sete reinos um lugar fascinante e diverso. Embora a guerra tenha dividido as raças, é importante lembrar que a diversidade é uma característica valiosa e que cada raça possui habilidades únicas e importantes para o mundo em que vivemos.</p>
         <Carrosel></Carrosel>
       </div>
+    <hr></hr>
+      <div className='canvas3'>
+        <h1>Sobre o Projeto</h1>
+
+        <p>Temos o prazer de anunciar nosso novo RPG no Discord, o Earth of Dungeons! Se você é um fã de jogos de RPG e quer se aventurar em um mundo mágico, este é o lugar perfeito para você!
+        <br/><br/><br/>
+Nosso jogo é baseado em cartas, tornando-o único e desafiador. Você pode escolher seu personagem e usar cartas para realizar ações, lutar contra inimigos e explorar o mundo.
+<br/><br/><br/>
+Mas isso não é tudo! Também temos um sistema de site que oferece recompensas diárias e missões paralelas para tornar sua experiência de jogo ainda mais envolvente e recompensadora. Com essas missões, você pode ganhar pontos e itens especiais que podem ser usados para melhorar seu personagem e aumentar suas chances de sobrevivência.
+<br/><br/><br/>
+Junte-se a nós e comece sua aventura em Earth of Dungeons! Nós fornecemos todas as ferramentas necessárias para ajudá-lo a ter a melhor experiência de jogo possível. E com um sistema de recompensas, você tem ainda mais motivos para continuar jogando e se aprimorando.
+<br/><br/><br/>
+Não perca mais tempo e entre no nosso servidor do Discord para começar a jogar. Junte-se a outros jogadores e embarque em uma aventura emocionante em um mundo mágico e cheio de desafios. Vamos jogar!</p>
+      </div>
       <Footer></Footer>
     </div>
 
