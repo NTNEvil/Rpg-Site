@@ -17,6 +17,18 @@ body {
   font-family: 'Satisfy', cursive;
   color: white;
 }
+.Side a{
+  color: #eed895;
+  text-decoration: none;
+}
+.orn2{
+  width: 150px;
+  position: absolute;
+  left: 50px;
+}
+.Side img:last-child{
+transform: rotate(90deg) translateY(-160px) translateX(-180px);
+}
 .Profile h2{
   width: 100%;
   text-align: center;
@@ -292,14 +304,46 @@ nav svg {
     transform: translateY(0px);
   }
 }
-
+.coofe{
+  width: 100%;
+}
+.card{
+width: 48%;  
+margin: 0.5%;
+height: 207px;
+transition: 0.2s all linear;
+}
+.card:hover{
+  transform: scale(1.09);
+}
+.Friends{
+  display: flex;
+}
+.card h2{
+transform: translateY(-80px);
+text-shadow: 0px 0px 5px #070711;
+text-align: center;
+}
+.starsCard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card svg{
+  transform: translateY(-95px);
+  width: 30px;
+}
+.card img{
+  width: 100%;
+  border-radius: 15px;
+}
 .Side {
   width: 80%;
   height: 10vh;
   display: flex;
   position: fixed;
   background: #7e6c38;
-  color: #070711;
+  color: #eed895;
   flex-direction: column;
   z-index: 100;
   transform: translateX(-500px);
@@ -307,6 +351,7 @@ nav svg {
 
 .Side svg {
   width: 30px;
+  color: #070711;
   margin: 20px;
 }
 
@@ -315,11 +360,14 @@ nav svg {
   margin: 10px;
   font-size: xx-large;
   transition: 0.3s all linear;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s all linear;
 }
 
 .Side li:hover {
-  background: rgb(41, 8, 35);
-  background: linear-gradient(90deg, rgba(41, 8, 35, 1) 0%, rgba(253, 29, 29, 0) 60%);
+  background: rgb(196, 152, 58);
+  background: linear-gradient(90deg, rgb(226, 177, 70) 0%, rgba(253, 29, 29, 0) 60%);
 }
 
 @keyframes slide-in-fwd-tl {
@@ -358,10 +406,20 @@ nav svg {
   font-weight: lighter;
   text-align: center;
 }
+.OnlyCell{
+  width: 100%;
+  background-color: #7e6c38;
+  height: 100vh;
+  position: fixed;
+  z-index: 10000000000;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
 
 .canvas1 p {
   color: #eed895;
-  margin: 10px;
+  margin: 15px;
   font-family: 'Playfair Display', serif;
   font-size: large;
 }
@@ -459,7 +517,7 @@ hr {
 
 .canvas3 p {
   font-family: 'Playfair Display', serif;
-  margin: 5px;
+  margin: 15px;
 }
 
 .canvas3 img {
@@ -474,7 +532,13 @@ hr {
   position: absolute;
   width: 150px;
   left: 0;
-  transform: translateY(-20px) translate(-50%);
+  transform: translateY(-60px) translate(-50%);
   margin-left: 50%;
 
+}
+
+@media screen and (max-width: 426px) {
+  .OnlyCell{
+    visibility: hidden;
+  }
 }

@@ -19,7 +19,9 @@ function Home() {
   return (
 
     <div className="App">
-
+      <div className='OnlyCell'>
+        Atenção! Essa Aplicação so funciona para celulares.
+      </div>
 
       <SideMenu></SideMenu>
       <iframe src={mySound} allow="autoplay" id="iframeAudio">
@@ -35,7 +37,7 @@ function Home() {
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
           <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
         </svg>
-        Scroll</div>
+        <h4>Scroll</h4></div>
       <div className='canvas1'>
                 <h1>O mundo</h1>
         <p>Houve um tempo em que a paz reinava entre as diferentes raças do mundo de Jigen. Elfos, anões, humanos, orcs, todos coexistiam pacificamente, compartilhando suas culturas e tradições. No entanto, tudo mudou quando a guerra eclodiu entre eles. Ninguém sabe exatamente qual foi a causa, mas logo as batalhas se tornaram comuns e o mundo se tornou um lugar perigoso, cheio de morte e destruição.
