@@ -16,14 +16,29 @@ import compass from './compass.png'
 import { useEffect, useState } from 'react';
 
 function Home() {
-
+var istrue = true
 function animate() {
-  new Audio(sound).play();
-  document.querySelector('.Map').style.transform =  'scale(4.2) rotate(200deg)';
-  document.querySelector('.Mapa').style.animation = 'apear 1.5s linear'
-  document.querySelector('.Mapa').style.opacity = '1'
-  document.querySelector('.light').style.display = 'none'
-  document.querySelector('.light2').style.display = 'none'
+  if (istrue == true) {
+    istrue = false
+    new Audio(sound).play();
+    document.querySelector('.Map').style.transform =  'scale(4.2) rotate(200deg)';
+    document.querySelector('.Mapa').style.animation = 'apear 1.5s linear'
+    document.querySelector('.Mapa').style.opacity = '1'
+    document.querySelector('.light').style.display = 'none'
+    document.querySelector('.light2').style.display = 'none'
+    document.querySelector('.Start').innerHTML = 'Voltar'
+  }else{
+    istrue = true
+    document.querySelector('.Mapa').style.animation = 'disapear 1.5s linear'
+    document.querySelector('.Map').style.transform =  'scale(1) rotate(0deg)';
+    document.querySelector('.Mapa').style.opacity = '0'
+    document.querySelector('.light').style.display = 'block'
+    document.querySelector('.light2').style.display = 'block'
+    document.querySelector('.Start').innerHTML = 'Começar'
+    new Audio(sound).play();
+
+  }
+
 }
 
   return (

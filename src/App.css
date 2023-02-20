@@ -221,6 +221,19 @@ nav svg {
     opacity: 1;
   }
 }
+@keyframes disapear {
+  0% {
+    opacity:0;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 
 .light2 {
   position: absolute;
