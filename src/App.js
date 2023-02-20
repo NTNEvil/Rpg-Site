@@ -19,9 +19,11 @@ function Home() {
 
 function animate() {
   new Audio(sound).play();
-  document.querySelector('.Map').style.transform =  'scale(4.2) rotate(180deg)';
+  document.querySelector('.Map').style.transform =  'scale(4.2) rotate(200deg)';
   document.querySelector('.Mapa').style.animation = 'apear 1.5s linear'
   document.querySelector('.Mapa').style.opacity = '1'
+  document.querySelector('.light').style.display = 'none'
+  document.querySelector('.light2').style.display = 'none'
 }
 
   return (
