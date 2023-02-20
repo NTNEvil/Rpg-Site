@@ -13,7 +13,7 @@ function SideMenu() {
     <li><a href="/guild">Guild</a></li>
     <li><a href="/user">Perfil</a></li>
     <li><a href="/friends">Taberna</a></li>
-    <li>Monstruario</li>
+    <li><a href="/monsters">Monstruario</a></li>
     <li>Cards</li>
     <li>Parceiros</li>
 </ul>
