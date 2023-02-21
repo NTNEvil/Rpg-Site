@@ -15,23 +15,23 @@ function Shop() {
             <h1 style={{textAlign : 'center'}}>Shop</h1>
             
             <ul>
-                <li>Poções de cura e mana: 50 a 100 moedas de ouro</li>
-                <li>Flechas, dardos e balas para armas: 1 a 2 moedas de ouro por unidade</li>
-                <li>Adagas, machados e espadas simples: 50 a 150 moedas de ouro
+                <li>Poções de cura e mana: 50 a 100 moedas de prata</li>
+                <li>Flechas, dardos e balas para armas: 1 a 2 moedas de prata por unidade</li>
+                <li>Adagas, machados e espadas simples: 50 a 150 moedas de prata
                 </li>
-                <li>Armaduras leves de couro ou malha: 100 a 250 moedas de ouro
+                <li>Armaduras leves de couro ou malha: 100 a 250 moedas de prata
                 </li>
-                <li>Livros de habilidades e feitiços básicos: 100 a 200 moedas de ouro
+                <li>Livros de habilidades e feitiços básicos: 100 a 200 moedas de prata
                 </li>
-                <li>Ferramentas de mineração e coleta: 25 a 50 moedas de ouro
+                <li>Ferramentas de mineração e coleta: 25 a 50 moedas de prata
                 </li>
-                <li>Pederneiras e isqueiros para acender fogueiras: 5 a 10 moedas de ouro
+                <li>Pederneiras e isqueiros para acender fogueiras: 5 a 10 moedas de prata
                 </li>
-                <li>Pães, frutas e água potável: 2 a 5 moedas de ouro
+                <li>Pães, frutas e água potável: 2 a 5 moedas de prata
                 </li>
-                <li>Cordas e correntes para escalar ou prender inimigos: 25 a 50 moedas de ouro
+                <li>Cordas e correntes para escalar ou prender inimigos: 25 a 50 moedas de prata
                 </li>
-                <li>Bolsas e mochilas para carregar itens: 10 a 25 moedas de ouro
+                <li>Bolsas e mochilas para carregar itens: 10 a 25 moedas de prata
 
                 </li>
             </ul>

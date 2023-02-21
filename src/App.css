@@ -9,7 +9,6 @@ body {
 }
 .Profile{
   color: #eed895;
-  font-family: 'Playfair Display', serif;
   display: flex;
   flex-wrap: wrap;
 }
@@ -18,8 +17,14 @@ body {
   color: white;
 }
 .Side a{
+  font-family: 'Gloock', serif;
   color: #eed895;
   text-decoration: none;
+  text-shadow: 0px 0px 10px #ffae00;
+}
+.Side a:hover{
+  color: rgb(233, 228, 217);
+  text-shadow: 0px 0px 20px #fcac00;
 }
 .orn2{
   width: 150px;
@@ -111,6 +116,32 @@ nav {
 }
 .Profile img{
   width: 100%;
+}
+.missions{
+  height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 0px;
+}
+.container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#resultado {
+  font-size: 24px;
+  font-weight: bold;
+}
+.circus{
+  height: 100vh;
+  width: 100%;
+  z-index: -10;
 }
 button{
   border: 2px solid #eed895;
@@ -318,7 +349,18 @@ nav svg {
     opacity: 0.7;
   }
 }
-
+.missions form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(172, 11, 11);
+}
+.miss{
+  width: 100%;
+}
 .Login {
   z-index: 100;
   position: absolute;
@@ -436,11 +478,32 @@ transition: 0.2s all linear;
 }
 .Friends{
   display: flex;
+  flex-wrap: wrap;
 }
 .card h2{
 transform: translateY(-80px);
 text-shadow: 0px 0px 5px #070711;
 text-align: center;
+}
+.Cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+}
+.missions form {
+  position: absolute;
+  margin-top: -160px;
+}
+
+select {
+  font-size: 1.2em;
+  padding: 5px;
+}
+#nome {
+  margin-top: 50px;
+  font-size: 1em;
 }
 .starsCard{
   display: flex;
@@ -460,12 +523,108 @@ text-align: center;
   width: 50%;
   height: 10vh;
   display: flex;
+  left: 0;
   position: fixed;
-  background: #7e6c38;
+  background: #070711;
+  border-right: 2px solid #eed895;
   color: #eed895;
+  background:
+    radial-gradient(black 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#070711 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #7e6c38 75px, #7e6c38 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #7e6c38 76px, #7e6c38 77px, transparent 78px, transparent 109px),
+    #070711;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
   flex-direction: column;
   transform: translateX(-500px);
 }
+.screen{
+  background-color: rgba(11, 108, 172, 0.664);
+  display: flex;
+  text-align: center;
+  flex-direction: column; 
+  position: absolute;
+  padding: 20px;
+  border-bottom: 3px dashed #eed895;
+  border-top: 3px dashed #eed895;
+}
+.screen::after{
+  content: 'Voce Ganhou um ticket premiado';
+  position: absolute;
+  font-size: small;
+  transform: translateY(100px) translateX(58px);
+  font-weight: bold;
+  color: #070711;
+}
+.cardd {
+  position: relative;
+  width: 45%;
+  height: 200px;
+  perspective: 1000px;
+  margin: 5px;
+}
+
+.cardd .front, .cardd .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  border-radius: 15px;
+}
+
+.cardd .front {
+  background-color: #eed895;
+  background-image: url('https://qph.cf2.quoracdn.net/main-qimg-55502e90e69253a2d1aed910ecdd8cc3-lq');
+  background-size: 200%;
+  background-position: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transform: rotateY(0deg);
+}
+.star{
+ position: absolute;
+ width: 50px;
+ transform: translateY(15px);
+ z-index: 100;
+}
+.front h2{
+  color: #eed895;
+  text-align: center;
+  transform: translateY(-10px);
+  width: 100%;
+} 
+.cardd .back {
+  background-color: #1d1b04;
+  color: #eed895;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+.cardd.flipped .front {
+  transform: rotateY(-180deg);
+}
+
+.cardd.flipped .back {
+  transform: rotateY(0deg);
+}
+.screen img{
+  width: 100%;
+}
+.limiter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
 .Side ul{
   margin: 0;
   padding: 0;
@@ -477,8 +636,11 @@ text-align: center;
 }
 .Side svg {
   width: 30px;
-  color: #070711;
-  margin: 20px;
+  background-color: #7e6c3846;
+  padding: 10px;
+  border-radius: 50%;
+  color: #eed895;
+  margin: 10px;
 }
 
 .Side li {
@@ -489,11 +651,6 @@ text-align: center;
   border-radius: 5px;
   padding: 5px;
   transition: 0.3s all linear;
-}
-
-.Side li:hover {
-  background: rgb(196, 152, 58);
-  background: linear-gradient(90deg, rgb(226, 177, 70) 0%, rgba(253, 29, 29, 0) 60%);
 }
 
 @keyframes slide-in-fwd-tl {

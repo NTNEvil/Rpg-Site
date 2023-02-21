@@ -13,13 +13,11 @@ function Guild() {
     return (
 
         <div className="guildApp">
-
-
             <SideMenu></SideMenu>
             <h2 className='Login'>Log In</h2>
             <Nav></Nav>
             <iframe src={mySound} allow="autoplay loop" id="iframeAudio">
-                </iframe>
+            </iframe>
             <div className='canvasGui'>
 
                 <img className='guild' src={guild} />
@@ -38,7 +36,7 @@ function Guild() {
                 Estamos animados para ver o que você pode realizar na guilda. Se você tiver alguma dúvida, sinta-se à vontade para perguntar a um de nossos membros experientes. Boa sorte em suas missões, aventureiro!
             </p>
 
-            <button>Entrar Na Aventura</button>
+            <button onClick={() => { window.location.href = '/missions' }}>Entrar Na Aventura</button>
             <Footer></Footer>
         </div>
 

@@ -30,7 +30,7 @@ function animate() {
 
     document.querySelector('.title').innerHTML =  'Earth of Dungeons';
     document.querySelector('.subtitle').innerHTML =  'Explore o Mundo de magia';
-    document.querySelector('.FronteiraUnidaShop').style.zindex = '-101'
+    document.querySelector('.FronteiraUnidaShop').style.zindex = '-102'
   }else{
     istrue = true
     document.querySelector('.Mapa').style.animation = 'disapear 1.5s linear'
@@ -40,6 +40,7 @@ function animate() {
     document.querySelector('.light').style.display = 'block'
     document.querySelector('.light2').style.display = 'block'
     document.querySelector('.Start').innerHTML = 'Começar'
+    document.querySelector('.FronteiraUnidaShop').style.zindex = '-101'
     document.querySelector('.Map').style.transform =  'scale(1) rotate(0deg)';
     new Audio(sound).play();
 
@@ -55,8 +56,9 @@ function FronteiraUnida(){
   document.querySelector('.FronteiraUnida').style.opacity =  '1';
   document.querySelector('.title').innerHTML =  'Fronteira Unida';
   document.querySelector('.subtitle').innerHTML =  'O inicio';
+
   document.querySelector('.Mapa').style.opacity = '0'
-  document.querySelector('.FronteiraUnidaShop').style.zIndex = '-100'
+  document.querySelector('.FronteiraUnidaShop').style.zIndex = '100'
   document.querySelector('.Start').innerHTML = 'Começar'
   new Audio(sound).play();
 }
@@ -94,7 +96,7 @@ function Shope(){
 
         <img className='FronteiraUnida' src='https://cdn.discordapp.com/attachments/946523460060975157/1077317130363621478/NTC_KINGEz_village_people_town__fantasy__anime__RPG_d520750f-ebb9-4500-adc4-00829d688402.png'/>
         <div  onClick={Shope} className='FronteiraUnidaShop'> Loja </div>
-
+        
 
 
       </main>
@@ -110,18 +112,18 @@ function Shope(){
       <div className='canvas1'>
                 <h1>O mundo</h1>
         <p>Houve um tempo em que a paz reinava entre as diferentes raças do mundo de Jigen. Elfos, anões, humanos, orcs,Fadas, Draconatos, Tieflings todos coexistiam pacificamente, compartilhando suas culturas e tradições. No entanto, tudo mudou quando a guerra eclodiu entre eles. Ninguém sabe exatamente qual foi a causa, mas logo as batalhas se tornaram comuns e o mundo se tornou um lugar perigoso, cheio de morte e destruição.
-        </p>
+        </p><hr></hr>
         <div className='ornnament'><img src={orn} className='orn' /><img className='imgHistory' src={War} /></div>
-
+        <hr></hr>
         <p>A guerra durou por uma década, deixando um rastro de destruição e sofrimento em todo o mundo. Mas justamente quando parecia que as coisas não poderiam piorar, um novo mal surgiu das trevas. Monstros horríveis começaram a aparecer, aterrorizando as pessoas e destruindo tudo em seu caminho. Esses monstros eram diferentes de tudo o que já havia sido visto antes, e logo ficou claro que eles não tinham nenhuma relação com qualquer das raças envolvidas na guerra.
-        </p>
+        </p><hr></hr>
         <div className='ornnament'><img src={orn} className='orn' /><img className='imgHistory' src={dest} /></div>
-        <p>Mas os monstros não eram a única ameaça. De repente, enormes torres começaram a aparecer em todo o mundo, como se tivessem surgido do nada. Essas torres eram altas, tão altas que tocavam o céu, e pareciam estar envoltas em uma aura sombria e misteriosa. Poucas pessoas se atreviam a se aproximar delas, mas a lenda dizia que aqueles que conseguissem escalar até o topo se tornariam a própria encarnação do deus que habitava a torre.
-        </p>
+        <hr></hr><p>Mas os monstros não eram a única ameaça. De repente, enormes torres começaram a aparecer em todo o mundo, como se tivessem surgido do nada. Essas torres eram altas, tão altas que tocavam o céu, e pareciam estar envoltas em uma aura sombria e misteriosa. Poucas pessoas se atreviam a se aproximar delas, mas a lenda dizia que aqueles que conseguissem escalar até o topo se tornariam a própria encarnação do deus que habitava a torre.
+        </p><hr></hr>
         <div className='ornnament'><img src={orn} className='orn' /><img className='imgHistory' src={God} /></div>
-        <p>
+        <p><hr></hr>
           Agora, com os monstros das trevas destruindo tudo em seu caminho e as torres atraindo a atenção de todos, o mundo se tornou ainda mais perigoso e imprevisível. As sete raças rivais terão que deixar suas diferenças de lado e unir forças para enfrentar essas novas ameaças, antes que seja tarde demais.
-        </p>
+        </p><hr></hr>
         <div className='ornnament'><img src={orn} className='orn' /><img className='imgHistory' src={monster} /></div>
 
       </div>

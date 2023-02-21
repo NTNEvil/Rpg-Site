@@ -10,11 +10,13 @@ function SideMenu() {
 <img className='orn2' src={orn2}/>
 <ul>
     <li><a href="/">Home</a></li>
-    <li><a href="/guild">Guild</a></li>
     <li><a href="/user">Perfil</a></li>
+
+    <li><a href="/guild">Guild</a></li>
     <li><a href="/friends">Taberna</a></li>
     <li><a href="/monsters">Monstruario</a></li>
-    <li>Cards</li>
+    <li><a href="/roleta">Roleta</a></li>
+    <li><a href="/cards">Cards</a></li>
     <li>Parceiros</li>
 </ul>
 <img src={orn}/>
