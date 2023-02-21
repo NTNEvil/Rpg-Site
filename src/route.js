@@ -8,6 +8,7 @@ import Shop from './Shop';
 import Missions from './missions';
 import Roleta from './roleta';
 import Cards from './cards';
+import Quiz from './quiz';
 function App() {
   
 
@@ -24,7 +25,7 @@ return(
       <Route path="/missions" element={<Missions />} />
       <Route path="/roleta" element={<Roleta />} />
       <Route path="/cards" element={<Cards />} />
-      <Route path="/cards" element={<Cards />} />
+      <Route path="/quiz" element={<Quiz />} />
     </Routes>
   </Router>
 )

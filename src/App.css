@@ -43,6 +43,9 @@ transform: rotate(90deg) translateY(-110px) translateX(-180px);
   width: 100%;
 }
 .ProfileAdicional{
+
+  border: 2px solid #7e6c38;
+  margin: 10px;
   margin-top: -60px;
 }
 .ProfileAdicional p{
@@ -116,6 +119,29 @@ nav {
 }
 .Profile img{
   width: 100%;
+  transform: scale(1.05) translateY(-10px);
+  animation: breath 10.5s infinite;
+
+}
+@keyframes breath {
+  0% {
+    transform: scale(1.05) translateY(-10px);
+
+  }
+
+
+
+  50% {
+    transform: scale(1.0) translateY(0px);
+
+  }
+
+
+
+  100% {
+    transform: scale(1.05) translateY(-10px);
+
+  }
 }
 .missions{
   height: 100vh;
@@ -558,35 +584,7 @@ select {
   font-weight: bold;
   color: #070711;
 }
-.cardd {
-  position: relative;
-  width: 45%;
-  height: 200px;
-  perspective: 1000px;
-  margin: 5px;
-}
 
-.cardd .front, .cardd .back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transition: transform 0.5s;
-  border-radius: 15px;
-}
-
-.cardd .front {
-  background-color: #eed895;
-  background-image: url('https://qph.cf2.quoracdn.net/main-qimg-55502e90e69253a2d1aed910ecdd8cc3-lq');
-  background-size: 200%;
-  background-position: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  transform: rotateY(0deg);
-}
 .star{
  position: absolute;
  width: 50px;
@@ -595,24 +593,85 @@ select {
 }
 .front h2{
   color: #eed895;
+
   text-align: center;
   transform: translateY(-10px);
   width: 100%;
 } 
-.cardd .back {
-  background-color: #1d1b04;
-  color: #eed895;
-  text-align: center;
-  transform: rotateY(180deg);
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+.cardd {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 320px;
+  border-radius: 5px;
+  width: 45%;
+  margin: 1.5%;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  overflow: hidden;
+  border: 2px solid #eed895;
+ }
+ 
+  /*Image*/
+ .card-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background: #0a3394;
+  background: linear-gradient(to top, #0a3394, #4286f4);
+ }
+ .card-image img{
+  width: 100%;
+ }
+ /*Description */
+ .card-description {
+  transform: translateY(100%);
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background-color: #eed895;
+  color: #070711;
+  height: 80%;
+  bottom: 0;
+  z-index: 2;
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.2rem;
+ }
+.cardd h5{
+  position: absolute;
+  color: white;
+  text-shadow: 0px 0px 3px black;
+  z-index: 1;
+  bottom: 0;
+  margin: 0;
+  margin: 5px;
 }
+ /*Text*/
+ .text-title {
+  font-size: 1.4em;
+  margin: 0;
+  font-weight: 700;
+ }
+ .text-Rank{
+  margin: 0;
+ }
+ .text-Star{
+  margin: 0;
+ }
+ .text-body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 150%;
+ }
+ 
+ 
+ /* Hover states */
+ 
+ .cardd:hover .card-description {
+  transform: translateY(0%);
 
-.cardd.flipped .front {
-  transform: rotateY(-180deg);
-}
-
-.cardd.flipped .back {
-  transform: rotateY(0deg);
-}
+ }
+ 
 .screen img{
   width: 100%;
 }

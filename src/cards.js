@@ -24,67 +24,49 @@ function Cards() {
             <SideMenu></SideMenu>
             <h2 className='Login'>Log In</h2>
             <Nav></Nav>
-            <h1 style={{marginTop : '100px', textAlign : 'center'}}>CARTAS DE HABILIDADES</h1>
+            <h1 style={{ marginTop: '100px', textAlign: 'center' }}>CARTAS DE HABILIDADES</h1>
             <div class="cardd">
-                <div class="front">
-                    <h2>Estocada</h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="star bi bi-star-fill" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                        </svg>
-                </div>
-                <div class="back">
-                    <h2>Rank da Carta: E</h2>
-                    <p>Informações Adicionais</p>
+                <h5>ATK:10 - MP: -2</h5>
+                <div class="card-image"><img src="https://cdn.discordapp.com/attachments/1077441049024282756/1077443793906843698/Momessito_stab_ability__rpg__attack__assasin__hand_with_dagger_00326fb9-5e82-41e5-921e-a500d9938b3f.png" /></div>
+                <div class="card-description">
+                    <p class="text-title">Esfaquear</p>
+                    <p class="text-Rank">Rank:E</p>
+                    <p class="text-Star">Stars: </p>
+                    <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
             </div>
             <div class="cardd">
-                <div class="front">
-                    <h2>Estocada</h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="star bi bi-star-fill" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                        </svg>
-                </div>
-                <div class="back">
-                    <h2>Rank da Carta: E</h2>
-                    <p>Informações Adicionais</p>
+                <h5>HP: +4 - MP: -5</h5>
+                <div class="card-image"><img src="https://cdn.discordapp.com/attachments/1077441049024282756/1077449139144630322/Momessito_Heal_Magic_casting_green_speel__using_in_hurt_people_904b07a6-141d-4555-a073-5e880e613b17.png" /></div>
+                <div class="card-description">
+                    <p class="text-title">Cura Rapida</p>
+                    <p class="text-Rank">Rank:E</p>
+                    <p class="text-Star">Stars: </p>
+                    <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
             </div>
             <div class="cardd">
-                <div class="front">
-                    <h2>Estocada</h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="star bi bi-star-fill" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                        </svg>
-                </div>
-                <div class="back">
-                    <h2>Rank da Carta: E</h2>
-                    <p>Informações Adicionais</p>
+                <h5>Ag: +2 - MP: -1</h5>
+                <div class="card-image"><img src="https://cdn.discordapp.com/ephemeral-attachments/1077441049024282756/1077456343943876708/grid_0.webp" /></div>
+                <div class="card-description">
+                    <p class="text-title">Concentração</p>
+                    <p class="text-Rank">Rank:E</p>
+                    <p class="text-Star">Stars: </p>
+                    <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
             </div>
+            
             <div class="cardd">
-                <div class="front">
-                    <h2>Estocada</h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="star bi bi-star-fill" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                        </svg>
-                </div>
-                <div class="back">
-                    <h2>Rank da Carta: E</h2>
-                    <p>Informações Adicionais</p>
+                <h5>MP: -2</h5>
+                <div class="card-image"><img src="https://cdn.discordapp.com/ephemeral-attachments/1077441049024282756/1077456293574496256/grid_0.webp" /></div>
+                <div class="card-description">
+                    <p class="text-title">Senso de Perigo</p>
+                    <p class="text-Rank">Rank:E</p>
+                    <p class="text-Star">Stars: </p>
+                    <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
             </div>
-            <div class="cardd">
-                <div class="front">
-                    <h2>Estocada</h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="star bi bi-star-fill" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                        </svg>
-                </div>
-                <div class="back">
-                    <h2>Rank da Carta: E</h2>
-                    <p>Informações Adicionais</p>
-                </div>
-            </div>
+            
             <Footer></Footer>
         </div>
     )
