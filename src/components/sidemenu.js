@@ -17,7 +17,7 @@ function SideMenu() {
     <li><a href="/monsters">Monstruario</a></li>
     <li><a href="/roleta">Roleta</a></li>
     <li><a href="/cards">Cards</a></li>
-    <li>Parceiros</li>
+    <li><a href="/tct">TCT</a></li>
 </ul>
 <img src={orn}/>
 

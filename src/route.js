@@ -9,6 +9,9 @@ import Missions from './missions';
 import Roleta from './roleta';
 import Cards from './cards';
 import Quiz from './quiz';
+import DarkFlorest from './ambientation/darkflorest';
+import War from './ambientation/War';
+import Tct from './tct';
 function App() {
   
 
@@ -26,6 +29,9 @@ return(
       <Route path="/roleta" element={<Roleta />} />
       <Route path="/cards" element={<Cards />} />
       <Route path="/quiz" element={<Quiz />} />
+      <Route path="/darkflorest" element={<DarkFlorest />} />
+      <Route path="/war" element={<War />} />
+      <Route path="/tct" element={<Tct />} />
     </Routes>
   </Router>
 )

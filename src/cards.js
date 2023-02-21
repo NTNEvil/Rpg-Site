@@ -1,4 +1,5 @@
 import Footer from "./components/footer";
+import Login from "./components/Login";
 import Nav from "./components/nav";
 import SideMenu from "./components/sidemenu";
 
@@ -22,15 +23,13 @@ function Cards() {
         // rotas
         <div className="Cards" onClick={girar}>
             <SideMenu></SideMenu>
-            <h2 className='Login'>Log In</h2>
+            <Login></Login>
             <Nav></Nav>
             <h1 style={{ marginTop: '100px', textAlign: 'center' }}>CARTAS DE HABILIDADES</h1>
             <div class="cardd">
-                <h5>ATK:10 - MP: -2</h5>
                 <div class="card-image"><img src="https://cdn.discordapp.com/attachments/1077441049024282756/1077443793906843698/Momessito_stab_ability__rpg__attack__assasin__hand_with_dagger_00326fb9-5e82-41e5-921e-a500d9938b3f.png" /></div>
                 <div class="card-description">
-                    <p class="text-title">Esfaquear</p>
-                    <p class="text-Rank">Rank:E</p>
+                    <p class="text-title">O dominador</p>
                     <p class="text-Star">Stars: </p>
                     <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
@@ -55,7 +54,7 @@ function Cards() {
                     <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
             </div>
-            
+
             <div class="cardd">
                 <h5>MP: -2</h5>
                 <div class="card-image"><img src="https://cdn.discordapp.com/ephemeral-attachments/1077441049024282756/1077456293574496256/grid_0.webp" /></div>
@@ -66,7 +65,7 @@ function Cards() {
                     <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
             </div>
-            
+
             <Footer></Footer>
         </div>
     )

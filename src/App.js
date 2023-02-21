@@ -13,6 +13,7 @@ import SideMenu from './components/sidemenu';
 import sound from './zoom.mp3'
 import Nav from './components/nav';
 import compass from './compass.png'
+import Login from './components/Login';
 
 function Home() {
 var istrue = true
@@ -77,8 +78,10 @@ function Shope(){
 
       <iframe src={mySound} allow="autoplay" id="iframeAudio">
       </iframe>
-      <h2 className='Login'>Log In</h2>
+      
       <Nav></Nav>
+      <Login></Login>
+
       <main className='Canvas'>
         
         <div className='Fade'></div>      
@@ -113,7 +116,7 @@ function Shope(){
                 <h1>O mundo</h1>
         <p>Houve um tempo em que a paz reinava entre as diferentes raças do mundo de Jigen. Elfos, anões, humanos, orcs,Fadas, Draconatos, Tieflings todos coexistiam pacificamente, compartilhando suas culturas e tradições. No entanto, tudo mudou quando a guerra eclodiu entre eles. Ninguém sabe exatamente qual foi a causa, mas logo as batalhas se tornaram comuns e o mundo se tornou um lugar perigoso, cheio de morte e destruição.
         </p><hr></hr>
-        <div className='ornnament'><img src={orn} className='orn' /><img className='imgHistory' src={War} /></div>
+        <div className='ornnament'><a href="/war"><img src={orn} className='orn' /><img className='imgHistory' src={War} /></a></div>
         <hr></hr>
         <p>A guerra durou por uma década, deixando um rastro de destruição e sofrimento em todo o mundo. Mas justamente quando parecia que as coisas não poderiam piorar, um novo mal surgiu das trevas. Monstros horríveis começaram a aparecer, aterrorizando as pessoas e destruindo tudo em seu caminho. Esses monstros eram diferentes de tudo o que já havia sido visto antes, e logo ficou claro que eles não tinham nenhuma relação com qualquer das raças envolvidas na guerra.
         </p><hr></hr>
@@ -124,7 +127,7 @@ function Shope(){
         <p><hr></hr>
           Agora, com os monstros das trevas destruindo tudo em seu caminho e as torres atraindo a atenção de todos, o mundo se tornou ainda mais perigoso e imprevisível. As sete raças rivais terão que deixar suas diferenças de lado e unir forças para enfrentar essas novas ameaças, antes que seja tarde demais.
         </p><hr></hr>
-        <div className='ornnament'><img src={orn} className='orn' /><img className='imgHistory' src={monster} /></div>
+        <div className='ornnament'><a href='/darkflorest' onClick={()=>{document.querySelector('.monst').style.zIndex = '1000000';document.querySelector('.monst').style.transform = 'scale(10)'}}><img src={orn} className='orn' /><img className='imgHistory monst' src={monster} /></a></div>
 
       </div>
       <hr></hr>
