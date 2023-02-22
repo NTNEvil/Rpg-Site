@@ -31,7 +31,7 @@ function animate() {
 
     document.querySelector('.title').innerHTML =  'Earth of Dungeons';
     document.querySelector('.subtitle').innerHTML =  'Explore o Mundo de magia';
-    document.querySelector('.FronteiraUnidaShop').style.zindex = '-102'
+    document.querySelector('.FronteiraUnidaShop').style.zindex = '-200'
   }else{
     istrue = true
     document.querySelector('.Mapa').style.animation = 'disapear 1.5s linear'
@@ -83,7 +83,7 @@ function Shope(){
       <Login></Login>
 
       <main className='Canvas'>
-        
+        <div className="easterCLick" onClick={() => {window.location.href = '/sea'}}></div>
         <div className='Fade'></div>      
         
         <h1 className='title'> Earth of Dungeons </h1>

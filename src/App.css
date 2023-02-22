@@ -167,15 +167,6 @@ nav {
   }
 }
 
-.missions {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0px;
-}
-
 .container {
   overflow: hidden;
   display: flex;
@@ -195,7 +186,31 @@ nav {
   width: 100%;
   z-index: -10;
 }
+.Sea{
+  background-color: #030302;
+  height: 100vh;
+}
+.Sea img{
+animation: sea 20s linear;
+}
+@keyframes sea {
+  0% {
+    transform: scale(45) translateY(100px);
+  }
+  20%{
+    transform: scale(45) translateY(100px);
+  }
 
+
+
+
+
+
+  100% {
+    transform: scale(1);
+
+  }
+}
 button {
   border: 2px solid #eed895;
   color: #eed895;
@@ -204,6 +219,7 @@ button {
   border-radius: 5px;
   border-bottom: 7px solid #eed895;
   font-family: 'Gloock', serif;
+  box-shadow: 0px 0px 25px #eed8955d;
   font-weight: bold;
   letter-spacing: 1.4px;
   transition: 0.2s all linear;
@@ -258,6 +274,7 @@ nav svg {
 }
 
 .FronteiraUnidaShop {
+  
   z-index: -200;
   transition: 2s all linear;
   position: absolute;
@@ -265,7 +282,8 @@ nav svg {
   transform: rotate(20deg);
   top: 305px;
   padding: 5px;
-  background-color: rgba(255, 0, 0, 0.445);
+  color: transparent;
+  background-color: rgba(255, 0, 0, 0);
   border-radius: 5px;
 }
 
@@ -419,16 +437,6 @@ nav svg {
   }
 }
 
-.missions form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: rgb(172, 11, 11);
-}
-
 .miss {
   width: 100%;
 }
@@ -449,7 +457,7 @@ nav svg {
 }
 
 .Login:hover {
-  color: #1d1b04;
+  color: #fcac00;
 }
 
 .title {
@@ -569,11 +577,6 @@ nav svg {
   flex-wrap: wrap;
   height: 100vh;
   width: 100%;
-}
-
-.missions form {
-  position: absolute;
-  margin-top: -160px;
 }
 
 select {
@@ -717,7 +720,6 @@ select {
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   overflow: hidden;
   border: 2px solid #eed895;
-  transform: scale(3) translate(-20px, 260px);
 }
 
 .imgFlorest {
@@ -731,7 +733,15 @@ select {
   position: absolute;
   top: 0;
   left: 0;
-  animation: monstr 60s linear;
+  animation: monstr 280s linear;
+}
+.easterCLick{
+  position: absolute;
+  width: 30px ;
+  height: 30px;
+  background-color: transparent;
+  top: 380px;
+  right: 60px;
 }
 .imgOver {
   width: 100%;
@@ -832,6 +842,14 @@ select {
 }
 .inputs{
   opacity: 0;
+}
+.eye{
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  position: absolute;
+  top: 175px;
+  left: 140px;
 }
 .fade {
   width: 100%;
@@ -1136,9 +1154,20 @@ hr {
 }
 
 /*Login*/
+.login-box input{
+  width: 100%;
+  background-color: #070711;
+  padding: 10px;
+  margin: 5px 0px;
+  border: 2px solid #7e6c38;
+}
 .login-box {
   position: absolute;
   z-index: 200;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   top: 50%;
   left: 50%;
   width: 400px;
@@ -1420,6 +1449,7 @@ hr {
 	top: 130%;
 	left: 50%;
 	width: 300px;
+  z-index: 100;
 	height: 400px;
 	background: #ebd1ab;
 	transform-style: preserve-3d;
@@ -1639,4 +1669,92 @@ z-index: 1000000;
   border: 1px solid white;
   border-radius: 5px;
   cursor: pointer;
+}
+
+
+
+.mission-board {
+  background-color: #ffe4b5;
+  border-radius: 10px;
+  color: #070711;
+  margin: 10px;
+  margin-top: 100px;
+
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.mission-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mission-card {
+  background-color: #f5deb3;
+  border: 1px solid #8b4513;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.mission-card:hover {
+  transform: scale(1.05);
+}
+
+.mission-card h2 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.mission-card p {
+  margin: 0;
+}
+
+.mission-card p strong {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.mission-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.mission-buttons button {
+  background-color: #8b4513;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.mission-buttons button:hover {
+  background-color: #a0522d;
+  transform: scale(1.05);
+}
+
+.missions {
+  max-height: 150px;
+  overflow: scroll;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.missions.expanded {
+  max-height: auto;
+}
+
+@media (min-width: 768px) {
+  .mission-board {
+    width: 50%;
+    margin: 10px auto;
+  }
 }

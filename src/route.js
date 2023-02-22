@@ -12,6 +12,7 @@ import Quiz from './quiz';
 import DarkFlorest from './ambientation/darkflorest';
 import War from './ambientation/War';
 import Tct from './tct';
+import Sea from './ambientation/Sea';
 function App() {
   
 
@@ -32,6 +33,7 @@ return(
       <Route path="/darkflorest" element={<DarkFlorest />} />
       <Route path="/war" element={<War />} />
       <Route path="/tct" element={<Tct />} />
+      <Route path="/sea" element={<Sea />} />
     </Routes>
   </Router>
 )

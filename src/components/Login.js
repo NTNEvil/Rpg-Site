@@ -1,37 +1,47 @@
-import React from "react";
+import React from 'react';
+import axios from 'axios';
 
-function Login() {
-    function apeel() {
-        document.querySelector('.login-box').style.transform = 'translate(-50%, -55%)'
-    }
-    function desapear() {
-        document.querySelector('.login-box').style.transform = 'translate(-1000px)'
-    }
-    return (<div>
+class LoginForm extends React.Component {
+  handleSubmit = (event) => {
+    event.preventDefault();
 
-        <h2 className='Login' onClick={apeel}>Log In</h2>
-        <div class="login-box">
-            <div className="fechar" onClick={desapear}>X</div>
-            <p>Login</p>
-            <form>
-                <div class="user-box">
-                    <input required="" name="" type="text" autocomplete="off"/>
-                    <label>Usuario</label>
-                </div>
-                <div class="user-box">
-                    <input required="" name="" type="password" autocomplete="off"/>
-                    <label>Senha</label>
-                </div>
-                <a href="#">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Entrar
-                </a>
-            </form>
-        </div>
-    </div>);
+    const url = 'http://52.86.121.123:3000/login';
+    const username = document.querySelector('.username-input').value;
+    const password = document.querySelector('.password-input').value;
+
+    const data = {
+      username: username,
+      password: password
+    };
+
+    axios.post(url, data)
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
+  render() {
+    return (
+        <div>
+            <h2 className='Login' onClick={()=>{document.querySelector('.login-box').style.transform = 'translateX(-50%)'}}>Login</h2>
+        <div className='login-box'>
+            <h4 style={{textAlign : 'left', width : '100%'}} onClick={()=>{document.querySelector('.login-box').style.transform = 'translateX(-1000px)'}}>X</h4>
+      <form onSubmit={this.handleSubmit}>
+        <label htmlFor="username">Username:</label>
+        <input type="text" className="username-input" name="username" />
+
+        <label htmlFor="password">Password:</label>
+        <input type="password" className="password-input" name="password" />
+
+        <button type="submit">Submit</button>
+      </form>
+      </div>
+      </div>
+    );
+  }
 }
 
-export default Login;
+export default LoginForm;

@@ -36,7 +36,7 @@ function Guild() {
                 Estamos animados para ver o que você pode realizar na guilda. Se você tiver alguma dúvida, sinta-se à vontade para perguntar a um de nossos membros experientes. Boa sorte em suas missões, aventureiro!
             </p>
 
-            <button onClick={() => { window.location.href = '/missions' }}>Entrar Na Aventura</button>
+            <button style={{marginLeft : '50%',transform : 'translate(-50%)'}} onClick={() => { window.location.href = '/missions' }}>Entrar Na Aventura</button>
             <Footer></Footer>
         </div>
 

@@ -44,6 +44,7 @@ const Sorteador = () => {
      
      <div className="screen"> 
         <img src={ticket} />
+        
      <h1 >Roleta</h1>
       <p>Regras: A roleta so pode ser usada uma vez por dia, e quando usada o item dela vai direto para seu inventario, ela so pode ser pedida das meia noite ate as duas da manha</p>
       <button onClick={sortearNome}>Sortear</button>

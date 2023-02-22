@@ -1,75 +1,98 @@
-import Footer from './components/footer';
-import SideMenu from './components/sidemenu';
-import Nav from './components/nav';
-import sign from './sign.png'
+import React, { useEffect, useState } from "react";
+import Login from "./components/Login";
+import Nav from "./components/nav";
+import SideMenu from "./components/sidemenu";
 
-import React, { useState } from "react";
+const missions = [
+  {
+    name: "Salvar a princesa",
+    description:
+      "A princesa foi sequestrada pelo dragão! Derrote o dragão e salve a princesa.",
+    difficulty: "C",
+    reward: "1.000 moedas de ouro",
+  },
+  {
+    name: "Derrotar o bando de goblins",
+    description:
+      "Os goblins estão atacando a vila! Derrote o líder do bando de goblins e proteja a vila.",
+    difficulty: "B",
+    reward: "2.000 moedas de ouro",
+  },
+  {
+    name: "Encontrar o tesouro perdido",
+    description:
+      "Um tesouro lendário está escondido em algum lugar na floresta. Encontre o tesouro e fique rico!",
+    difficulty: "A",
+    reward: "5.000 moedas de ouro",
+  },
+  {
+    name: "Conquistar a torre dos magos",
+    description:
+      "A torre dos magos é uma fortaleza impenetrável. Derrote o líder dos magos e tome a torre para si.",
+    difficulty: "S",
+    reward: "10.000 moedas de ouro",
+  },
+  {
+    name: "Enfrentar o dragão ancestral",
+    description:
+      "O dragão ancestral é um monstro lendário de poder inimaginável. Derrote-o e torne-se uma lenda viva.",
+    difficulty: "SS",
+    reward: "50.000 moedas de ouro",
+  },
+  {
+    name: "Salvar o mundo da escuridão",
+    description:
+      "Um mal antigo está despertando e ameaça consumir o mundo. Junte-se a outros heróis e derrote o mal para sempre.",
+    difficulty: "SSS",
+    reward: "100.000 moedas de ouro",
+  },
+];
 
-const Missions = () => {
-    const [nomeGerado, setNomeGerado] = useState("");
-
-    const gerarNome = (e) => {
-        e.preventDefault();
-        const opcao = e.target.elements.opcao.value;
-        let listaNomes;
-        switch (opcao) {
-            case "1":
-                listaNomes = ["Coletar ervas medicinais para o curandeiro local", "Entregar uma mensagem para um NPC em outra cidade", "Caçar animais selvagens que estão atacando a vila", "Coletar 10 ervas medicinais no campo.","Levar uma carta importante de um vilarejo para outro, atravessando uma floresta infestada de monstros.","Proteger uma caravana de mercadores em sua viagem pelo deserto.","Encontrar um cachorro perdido para o seu dono." , "Encontrar um baú escondido em uma caverna próxima." , 'Capturar 5 coelhos vivos para um criador de animais.' , 'Ajudar um ferreiro a coletar minérios para fazer novas armas.', 'Escoltar um grupo de fazendeiros até a cidade, protegendo-os de ladrões e monstros.',
-                'Encontrar um agricultor desaparecido em uma floresta próxima.',
-                'Derrotar um grupo de goblins que estão saqueando uma pequena cidade.',
-                'Descobrir o motivo do sumiço de água de uma vila próxima.',
-                'Limpar uma mina de monstros para que ela possa ser reaberta.',
-                'Ajudar um grupo de mineiros a sair de uma mina que desmoronou.',
-                'Ajudar um comerciante a proteger sua loja de ladrões noturnos.',
-                'Descobrir o responsável por uma série de roubos em uma pequena cidade.'
-            
-            ];
-                break;
-            case "2":
-                listaNomes = ["Eduardo", "Fábio", "Gustavo", "Henrique"];
-                break;
-            case "3":
-                listaNomes = ["Isabela", "Joana", "Karen", "Larissa"];
-                break;
-            default:
-                listaNomes = [];
-        }
-        const nomeAleatorio = listaNomes[Math.floor(Math.random() * listaNomes.length)];
-        setNomeGerado(nomeAleatorio);
+function Missions() {
+    const [expanded, setExpanded] = useState(false);
+  
+    const toggleExpanded = () => {
+      setExpanded(!expanded);
     };
-
+  
     return (
-        <div className='missions'>
-            <SideMenu></SideMenu>
-            <img className='miss' src='https://external-preview.redd.it/t6QF6W_IsVOcgzooxhxfnB-6o_TcGiVy5ng5tORNAxg.png?format=pjpg&auto=webp&s=648ab44172042f7537066da1161ac3bda5da8dbf'/>
-            <h2 className='Login'>Log In</h2>
-            <Nav></Nav>
-            <form onSubmit={gerarNome}>
-                <label>
-                    Escolha uma opção:
-                    <br />          <br />
-                    <br />
+        <div>
+                    <Nav></Nav>
+        <SideMenu></SideMenu>
+        <Login></Login>
+      <div className="mission-board">
 
-                    <select name="opcao">
-                        <option value="1">Rank E</option>
-                        <option value="2">Rank D</option>
-                        <option value="3">Rank C</option>
-                        <option value="3">Rank B</option>
-                        <option value="3">Rank A</option>
-                        <option value="3">Rank S</option>
-                        <option value="3">Rank SSS</option>
-                    </select>
-                </label>
-                <br />
-                <br />          <br />
-                    <br />
-                <button type="submit">Gerar Missão</button>
-            </form>
-            <h1>Missoes</h1>
-
-            <div id="nome">{nomeGerado}</div>
+        <h1>Missões disponíveis:</h1>
+        <div className="missions">
+          {expanded ? (
+            missions.map((mission, index) => (
+              <div className="mission-card mission" key={index}>
+                <h2>{mission.name}</h2>
+                <p>{mission.description}</p>
+                <p>
+                  <strong>Dificuldade:</strong> {mission.difficulty}
+                </p>
+                <p>
+                  <strong>Recompensa:</strong> {mission.reward}
+                </p>
+              </div>
+            ))
+          ) : (
+            <div className="mission-card mission">
+              <p>Selecione uma missão para mais informações.</p>
+            </div>
+          )}
         </div>
+        <div className="mission-buttons">
+          {expanded ? (
+            <button onClick={toggleExpanded}>Recolher</button>
+          ) : (
+            <button onClick={toggleExpanded}>Expandir</button>
+          )}
+        </div>
+      </div>
+      </div>
     );
-};
+  }
 
 export default Missions;
