@@ -52,10 +52,180 @@ body {
 }
 
 .ProfileAdicional {
-
+  width: 100%;
   border: 2px solid #7e6c38;
   margin: 10px;
   margin-top: -60px;
+}
+
+.inventory {
+  width: 100%;
+  margin: 0;
+}
+
+.inv {
+  margin: 20px 15px;
+  width: 100%;
+  height: 540px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-inv {
+  width: 65px;
+  height: 65px;
+  margin: 5px;
+  box-shadow: 0px 0px 10px #070711;
+  background-image: url('https://cdn.discordapp.com/attachments/1077978423147897003/1078009066254778478/canvas.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.inventory {
+  transform: translateY(60px);
+}
+
+.Invetory-canvas {
+  width: 360px;
+  margin: 20px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url('https://cdn.discordapp.com/attachments/1077978423147897003/1078006220155260970/inventory.png');
+}
+
+.Inv {
+  width: 100%;
+
+}
+
+.item-inv {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-inv span {
+  font-size: 10px;
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  margin-left: 2px;
+  border-radius: 20px;
+
+}
+
+.item-inv img {
+  height: 40px;
+  margin: 3px;
+  margin-bottom: 0;
+  width: 80%;
+  position: relative
+}
+
+.inv {
+  align-content: flex-start
+}
+
+.item-text {
+  display: flex;
+  margin-left: 5px;
+}
+
+.item-inv p {
+  width: 100%;
+  text-align: left;
+  font-size: 10px;
+  margin: 0;
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  .inv {
+    margin: 20px 15px;
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item-inv {
+    width: 41px;
+    height: 41px;
+    margin: 5px;
+    box-shadow: 0px 0px 10px #070711;
+    background-image: url('https://cdn.discordapp.com/attachments/1077978423147897003/1078009066254778478/canvas.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .Invetory-canvas {
+    width: 340px;
+    margin: 20px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('https://cdn.discordapp.com/attachments/1077978423147897003/1078006220155260970/inventory.png');
+  }
+}
+
+.inventoryW {
+  width: 100%;
+  height: 100vh;
+  z-index: -100;
+  background-image: url('https://cdn.discordapp.com/attachments/1077978423147897003/1078015451327631360/inventory.png');
+}
+
+.inventarioTitle {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 376px) {
+  .inv {
+    margin: 20px 15px;
+    width: 100%;
+    height: 540px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item-inv {
+    width: 50px;
+    height: 60px;
+    padding: 5px 10px;
+    margin: 5px;
+    box-shadow: 0px 0px 10px #070711;
+    background-image: url('https://cdn.discordapp.com/attachments/1077978423147897003/1078009066254778478/canvas.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: 0.2s all linear;
+  }
+
+  .item-inv:hover {
+    transform: scale(2);
+  }
+
+  .Invetory-canvas {
+    width: 360px;
+    margin: 20px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('https://cdn.discordapp.com/attachments/1077978423147897003/1078006220155260970/inventory.png');
+  }
 }
 
 .ProfileAdicional p {
@@ -75,7 +245,6 @@ body {
 }
 
 #root {
-  overflow-x: hidden;
   max-width: 425px;
   display: flex;
   align-items: center;
@@ -186,18 +355,22 @@ nav {
   width: 100%;
   z-index: -10;
 }
-.Sea{
+
+.Sea {
   background-color: #030302;
   height: 100vh;
 }
-.Sea img{
-animation: sea 20s linear;
+
+.Sea img {
+  animation: sea 20s linear;
 }
+
 @keyframes sea {
   0% {
     transform: scale(45) translateY(100px);
   }
-  20%{
+
+  20% {
     transform: scale(45) translateY(100px);
   }
 
@@ -211,6 +384,7 @@ animation: sea 20s linear;
 
   }
 }
+
 button {
   border: 2px solid #eed895;
   color: #eed895;
@@ -274,7 +448,7 @@ nav svg {
 }
 
 .FronteiraUnidaShop {
-  
+
   z-index: -200;
   transition: 2s all linear;
   position: absolute;
@@ -441,7 +615,8 @@ nav svg {
   width: 100%;
 }
 
-.Login {
+.Login,
+.Logado {
   z-index: 100;
   position: absolute;
   right: 1%;
@@ -662,7 +837,8 @@ select {
   transform: translateY(-10px);
   width: 100%;
 }
-.monsterPage{
+
+.monsterPage {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -675,7 +851,8 @@ select {
   opacity: 0;
   z-index: 0;
 }
-.monsterPage .cardd{
+
+.monsterPage .cardd {
   position: absolute;
   top: 0;
   margin: 0;
@@ -683,21 +860,24 @@ select {
   margin-top: 300px;
   opacity: 1;
 }
-.monst{
-  transition: 1.5s all 
-  linear;
+
+.monst {
+  transition: 1.5s all linear;
 }
-.imgWar{
+
+.imgWar {
   width: 100%;
 }
-.TitlesWar{
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    z-index: 11;
-    color: #996b40  ;
+
+.TitlesWar {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  z-index: 11;
+  color: #996b40;
 }
-.monsterClick{
+
+.monsterClick {
   width: 70px;
   height: 70px;
   margin-left: 50%;
@@ -708,6 +888,7 @@ select {
   z-index: 1001;
   top: 0;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 .cardd {
@@ -728,21 +909,24 @@ select {
   animation: cutscene 10s linear;
   z-index: -1;
 }
-.imgFlorestMonstr{
+
+.imgFlorestMonstr {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   animation: monstr 280s linear;
 }
-.easterCLick{
+
+.easterCLick {
   position: absolute;
-  width: 30px ;
+  width: 30px;
   height: 30px;
   background-color: transparent;
   top: 380px;
   right: 60px;
 }
+
 .imgOver {
   width: 100%;
   height: 770px;
@@ -771,35 +955,42 @@ select {
     transform: scale(1);
   }
 }
+
 @keyframes monstr {
   0% {
     opacity: 0;
   }
-  19%{
+
+  19% {
     opacity: 0;
   }
-  20%{
+
+  20% {
     opacity: 0.1;
   }
+
   100% {
     opacity: 1
   }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
 .TitlesDark {
   text-align: center;
   position: absolute;
   width: 100%;
   z-index: 11;
   animation: text-apear 10s linear;
-  color: #996b40  ;
+  color: #996b40;
 
 }
-.TitlesDark h3{
+
+.TitlesDark h3 {
   font-family: 'Amatic SC', cursive;
   color: rgb(155, 17, 17);
 }
+
 @keyframes rotate {
   0% {
     transform: scale(1);
@@ -840,10 +1031,12 @@ select {
 
   }
 }
-.inputs{
+
+.inputs {
   opacity: 0;
 }
-.eye{
+
+.eye {
   width: 20px;
   height: 20px;
   background-color: transparent;
@@ -851,6 +1044,7 @@ select {
   top: 175px;
   left: 140px;
 }
+
 .fade {
   width: 100%;
   position: absolute;
@@ -1154,13 +1348,22 @@ hr {
 }
 
 /*Login*/
-.login-box input{
+.login-box input {
   width: 100%;
   background-color: #070711;
+  color: #7e6c38;
   padding: 10px;
   margin: 5px 0px;
   border: 2px solid #7e6c38;
 }
+
+.logout-button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 25px;
+  color: white;
+}
+
 .login-box {
   position: absolute;
   z-index: 200;
@@ -1168,7 +1371,7 @@ hr {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  top: 50%;
+  top: 20%;
   left: 50%;
   width: 400px;
   padding: 40px;
@@ -1364,112 +1567,122 @@ hr {
 /*End Login*/
 
 .content-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: auto;
-	filter: drop-shadow(5px 5px 25px black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(5px 5px 25px black);
 }
 
 .content {
-	position: relative;
-	top: 10px;
-	background: url("https://i.imgur.com/0kjMcUe.png");
-	background-size: 1000px;
-	background-position: center right;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
-	width: 50%;
-	height: auto;
+  position: relative;
+  top: 10px;
+  background: url("https://i.imgur.com/0kjMcUe.png");
+  background-size: 1000px;
+  background-position: center right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+  height: auto;
   color: #070711;
-	padding: 30px 80px 50px 80px;
-	z-index: 1;
-	filter: brightness(0.95) sepia(30%) saturate(80%);
-	border-radius: 30px;
-	height: 90vh;
-	clip-path: polygon(
-		0% 0%,
-		0% 93%,
-		5% 98%,
-		6% 99%,
-		8% 95%,
-		12% 94%,
-		15% 97%,
-		17% 93%,
-		20% 98%,
-		22% 97%,
-		25% 99%,
-		31% 94%,
-		35% 93%,
-		39% 96%,
-		43% 93%,
-		45% 94%,
-		47% 95%,
-		50% 92%,
-		52% 96%,
-		54% 93%,
-		58% 92%,
-		60% 95%,
-		62% 93%,
-		65% 96%,
-		69% 93%,
-		72% 93%,
-		75% 94%,
-		79% 97%,
-		81% 94%,
-		85% 93%,
-		88% 92%,
-		90% 95%,
-		93% 93%,
-		95% 92%,
-		97% 95%,
-		100% 97%,
-		100% 0%
-	);
-	overflow: auto;
-}
-@media screen and (max-width: 560px) {
-	.content {
-		padding: 30px 30px 50px 30px;
-		width: 80%;
-	}
+  padding: 30px 80px 50px 80px;
+  z-index: 1;
+  filter: brightness(0.95) sepia(30%) saturate(80%);
+  border-radius: 30px;
+  height: 90vh;
+  clip-path: polygon(0% 0%,
+      0% 93%,
+      5% 98%,
+      6% 99%,
+      8% 95%,
+      12% 94%,
+      15% 97%,
+      17% 93%,
+      20% 98%,
+      22% 97%,
+      25% 99%,
+      31% 94%,
+      35% 93%,
+      39% 96%,
+      43% 93%,
+      45% 94%,
+      47% 95%,
+      50% 92%,
+      52% 96%,
+      54% 93%,
+      58% 92%,
+      60% 95%,
+      62% 93%,
+      65% 96%,
+      69% 93%,
+      72% 93%,
+      75% 94%,
+      79% 97%,
+      81% 94%,
+      85% 93%,
+      88% 92%,
+      90% 95%,
+      93% 93%,
+      95% 92%,
+      97% 95%,
+      100% 97%,
+      100% 0%);
+  overflow: auto;
 }
 
-.color1{color:#000000}/*MOUNTAIN MEADOW*/
-.color2{color:#ff1a01/*TALL POPPY*/}
+@media screen and (max-width: 560px) {
+  .content {
+    padding: 30px 30px 50px 30px;
+    width: 80%;
+  }
+}
+
+.color1 {
+  color: #000000
+}
+
+/*MOUNTAIN MEADOW*/
+.color2 {
+  color: #ff1a01
+    /*TALL POPPY*/
+}
 
 
 .carde {
-	color: #013243; /*SHERPA BLUE*/
-	position: absolute;
-	top: 130%;
-	left: 50%;
-	width: 300px;
+  color: #013243;
+  /*SHERPA BLUE*/
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  width: 300px;
   z-index: 100;
-	height: 400px;
-	background: #ebd1ab;
-	transform-style: preserve-3d;
-	transform: translate(-50%,-50%) perspective(2000px);
-	box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
-	transition: 1s;
+  height: 400px;
+  background: #ebd1ab;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 20px 0 60px rgba(0, 0, 0, .5);
+  transition: 1s;
 }
+
 .carde2 {
-	color: #013243; /*SHERPA BLUE*/
-	position: absolute;
-	top: 185%;
-	left: 50%;
-	width: 300px;
-	height: 400px;
-	background: #ebd1ab;
-	transform-style: preserve-3d;
-	transform: translate(-50%,-50%) perspective(2000px);
-	box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
-	transition: 1s;
+  color: #013243;
+  /*SHERPA BLUE*/
+  position: absolute;
+  top: 185%;
+  left: 50%;
+  width: 300px;
+  height: 400px;
+  background: #ebd1ab;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 20px 0 60px rgba(0, 0, 0, .5);
+  transition: 1s;
 }
+
 .targets-area {
   position: relative;
   width: 100%;
@@ -1489,92 +1702,107 @@ hr {
 .target:hover {
   transform: scale(1.2);
 }
-.down{
+
+.down {
 
   width: 1000%;
-  height: 1300px ;
-  background-color: transparent;  
+  height: 1300px;
+  background-color: transparent;
   top: 200%;
 }
-.carde:hover,.carde2:hover {
-	transform: translate(-50%,-50%) perspective(2000px) rotate(0deg) scale(1.2);
-	box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+
+.carde:hover,
+.carde2:hover {
+  transform: translate(-50%, -50%) perspective(2000px) rotate(0deg) scale(1.2);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
 }
 
-.carde:before,.carde2:before {
-	content:'';
-	position: absolute;
-	top: -5px;
-	left: 0;
-	width: 100%;
-	height: 5px;
-	background: #7a6c56;
-	transform-origin: bottom;
-	transform: skewX(-45deg);
+.carde:before,
+.carde2:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #7a6c56;
+  transform-origin: bottom;
+  transform: skewX(-45deg);
 }
 
-.carde:after,.carde2:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	right: -5px;
-	width: 5px;
-	height: 100%;
-	background: #7a6c56;
-	transform-origin: left;
-	transform: skewY(-45deg);
-}
-.carde .imgBox ,.carde2 .imgBox{
-	width: 100%;
-	height: 100%;
-	position: relative;
-	transform-origin: left;
-	transition: .7s;
+.carde:after,
+.carde2:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 5px;
+  height: 100%;
+  background: #7a6c56;
+  transform-origin: left;
+  transform: skewY(-45deg);
 }
 
-.carde .bark,.carde2 .bark {
-	position: absolute;
-	background: rgb(228, 203, 166);
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	transition: .7s;
+.carde .imgBox,
+.carde2 .imgBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: .7s;
 }
 
-.carde .imgBox img,.carde2 .imgBox img  {
-
-width:92.5%;
-border: 11px solid #493f2f;
-height: 375px;
+.carde .bark,
+.carde2 .bark {
+  position: absolute;
+  background: rgb(228, 203, 166);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .7s;
 }
 
-.carde:hover .imgBox ,.carde2:hover .imgBox{
-	transform: rotateY(-135deg);
+.carde .imgBox img,
+.carde2 .imgBox img {
+
+  width: 92.5%;
+  border: 11px solid #493f2f;
+  height: 375px;
 }
 
-.carde:hover .bark,.carde2:hover .bark {
-	opacity: 1;
-	transition: .6s;
+.carde:hover .imgBox,
+.carde2:hover .imgBox {
+  transform: rotateY(-135deg);
+}
+
+.carde:hover .bark,
+.carde2:hover .bark {
+  opacity: 1;
+  transition: .6s;
   box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
 }
 
-.carde .details ,.carde2 .details{
-	position: absolute;
-	top: 0;
-	left: 0;
-	box-sizing: border-box;
-	padding: 0 0 0 10px;
-	z-index: -1;
-	margin-top: 10px;
+.carde .details,
+.carde2 .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 0 0 10px;
+  z-index: -1;
+  margin-top: 10px;
 }
 
-.carde .details p,.carde2 .details p {
-	font-size: 15px;
+.carde .details p,
+.carde2 .details p {
+  font-size: 15px;
 }
 
-.carde .details h4,.carde2 .details h4 {
-	text-align: center;
+.carde .details h4,
+.carde2 .details h4 {
+  text-align: center;
 }
+
 .RandomClickGame {
   color: black;
   display: flex;
@@ -1605,12 +1833,14 @@ height: 375px;
   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
   border: 2px solid #7e6c38;
 }
-.tct{
+
+.tct {
   overflow: hidden;
   height: 100vh;
   width: 100%;
 }
-.tct .bg{
+
+.tct .bg {
   position: absolute;
   width: 100%;
   margin-left: 50%;
@@ -1627,10 +1857,11 @@ height: 375px;
   background-color: rgb(172, 11, 11);
   border: 5px solid #fcac00;
   box-shadow: 0px 0px 15px #fcac00;
-z-index: 1000000;
+  z-index: 1000000;
   cursor: pointer;
 }
-.target::after{
+
+.target::after {
   width: 10px;
   height: 10px;
   background-color: white;
@@ -1642,6 +1873,7 @@ z-index: 1000000;
   position: absolute;
   z-index: 100;
 }
+
 .game-over-message {
   display: flex;
   flex-direction: column;
